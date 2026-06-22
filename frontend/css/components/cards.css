@@ -1,0 +1,206 @@
+.card {
+    background: linear-gradient(150deg, rgba(246, 234, 216, 0.97), rgba(232, 206, 170, 0.96));
+    border-left: 7px solid var(--color-primary);
+    border-radius: 14px;
+    box-shadow: 0 10px 24px var(--shadow);
+    padding: 1.25rem 1.2rem;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(27, 16, 8, 0.32);
+}
+
+.hub-grid {
+    display: grid;
+    gap: 1.1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card-link {
+    display: grid;
+    align-content: start;
+    gap: 0.6rem;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.summary-item {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(47, 93, 80, 0.25);
+    border-radius: 10px;
+    padding: 0.7rem;
+    display: grid;
+    gap: 0.1rem;
+}
+
+.summary-item strong {
+    font-size: 1.6rem;
+    color: var(--color-primary);
+}
+
+.summary-item span {
+    font-size: 0.88rem;
+}
+
+.summary-item.contrast {
+    border-color: rgba(209, 73, 91, 0.44);
+}
+
+.summary-item.contrast strong {
+    color: var(--color-contrast);
+}
+
+.status-box {
+    margin: 0.2rem 0 1rem;
+    padding: 0.7rem 0.85rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(59, 36, 22, 0.2);
+    font-weight: 700;
+}
+
+.status-box.warning {
+    background: rgba(209, 73, 91, 0.18);
+    border-color: rgba(209, 73, 91, 0.5);
+}
+
+.status-box.ok {
+    background: rgba(47, 93, 80, 0.18);
+    border-color: rgba(47, 93, 80, 0.5);
+}
+
+.notebook {
+    margin-top: 0.9rem;
+    border: 1px solid rgba(59, 36, 22, 0.25);
+    border-radius: 12px;
+    padding: 0.9rem;
+    background:
+        linear-gradient(to bottom, rgba(239, 223, 194, 0.95), rgba(232, 205, 159, 0.95)),
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 29px,
+            rgba(122, 79, 42, 0.22) 30px
+        );
+}
+
+.task-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.task-list li {
+    padding: 0.55rem 0.65rem;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.32);
+    border: 1px solid rgba(59, 36, 22, 0.2);
+}
+
+.task-list li.important {
+    border-left: 5px solid #9d2f16;
+}
+
+.task-list li.done {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.task-list input[type="checkbox"] {
+    accent-color: #6f3f1c;
+}
+
+.task-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.task-row label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.task-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.task-meta small {
+    font-size: 0.82rem;
+}
+
+.due-urgent {
+    color: var(--color-contrast);
+    font-weight: 800;
+}
+
+.notes-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.notes-list li {
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(59, 36, 22, 0.2);
+    border-radius: 9px;
+    padding: 0.65rem;
+}
+
+.notes-list li p {
+    margin: 0;
+}
+
+.notes-list small {
+    display: block;
+    opacity: 0.8;
+    margin-top: 0.25rem;
+}
+
+.note-meta {
+    margin-top: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.events-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.events-list li {
+    border: 1px solid rgba(59, 36, 22, 0.22);
+    border-left: 6px solid var(--color-primary);
+    border-radius: 9px;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.events-list li p {
+    margin: 0.25rem 0 0;
+}
+
+.events-list li small {
+    display: block;
+    opacity: 0.8;
+    margin-top: 0.2rem;
+}

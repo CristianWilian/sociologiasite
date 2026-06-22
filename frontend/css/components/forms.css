@@ -1,0 +1,103 @@
+.task-form {
+    display: grid;
+    gap: 0.55rem;
+    margin-bottom: 0.9rem;
+}
+
+.task-form label {
+    font-weight: 700;
+}
+
+.task-form input[type="text"],
+.task-form input[type="date"] {
+    width: 100%;
+    border: 1px solid rgba(59, 36, 22, 0.35);
+    border-radius: 8px;
+    padding: 0.58rem 0.65rem;
+    font-family: 'Nunito', sans-serif;
+    background: rgba(255, 255, 255, 0.58);
+}
+
+.task-form-grid {
+    display: grid;
+    grid-template-columns: minmax(120px, 1fr) auto;
+    gap: 0.8rem;
+    align-items: end;
+}
+
+.task-important-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(47, 93, 80, 0.1);
+    border-radius: 8px;
+    padding: 0.45rem 0.55rem;
+    border: 1px solid rgba(47, 93, 80, 0.23);
+}
+
+.task-important-toggle input {
+    accent-color: var(--color-primary);
+}
+
+#noteSearch {
+    width: 100%;
+    border: 1px solid rgba(59, 36, 22, 0.35);
+    border-radius: 8px;
+    padding: 0.58rem 0.65rem;
+    margin-bottom: 0.6rem;
+    font-family: 'Nunito', sans-serif;
+    background: rgba(255, 255, 255, 0.58);
+}
+
+#noteInput {
+    width: 100%;
+    min-height: 130px;
+    border: 1px solid rgba(59, 36, 22, 0.35);
+    border-radius: 8px;
+    padding: 0.7rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    resize: vertical;
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.note-actions {
+    margin-top: 0.7rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.note-actions button {
+    border: none;
+    border-radius: 8px;
+    padding: 0.55rem 0.8rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(120deg, var(--color-primary), var(--wood-mid));
+}
+
+.note-actions button.secondary {
+    background: linear-gradient(120deg, #7f6d56, #8f7f6c);
+}
+
+.event-form {
+    display: grid;
+    gap: 0.55rem;
+}
+
+.event-form label {
+    font-weight: 700;
+}
+
+.event-form input,
+.event-form select,
+.event-form textarea {
+    width: 100%;
+    border: 1px solid rgba(59, 36, 22, 0.35);
+    border-radius: 8px;
+    padding: 0.6rem;
+    font-family: 'Nunito', sans-serif;
+    background: rgba(255, 255, 255, 0.6);
+}

@@ -1,0 +1,22 @@
+{
+  "name": "sociologia-frontend",
+  "version": "1.0.0",
+  "description": "Frontend para plataforma de estudos de Sociologia",
+  "scripts": {
+    "dev": "http-server -p 8000 -c-1",
+    "build": "echo 'Frontend is served as-is, no build needed'"
+  },
+  "keywords": [
+    "sociologia",
+    "estudos",
+    "frontend"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

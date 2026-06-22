@@ -1,0 +1,12 @@
+:root {
+    --color-primary: #2f5d50;
+    --color-aux: #d4a373;
+    --color-contrast: #d1495b;
+    --wood-dark: #3b2416;
+    --wood-mid: #7a4f2a;
+    --wood-light: #b7854f;
+    --surface-cream: #f6ead8;
+    --surface-soft: #fff6ea;
+    --text-main: #2a1a10;
+    --shadow: rgba(27, 16, 8, 0.25);
+}

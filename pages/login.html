@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Sociologia 3º</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body class="auth-page">
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <main class="auth-main">
+        <section class="auth-layout reveal">
+            <aside class="auth-visual" id="authVisual">
+                <img src="../assets/login-illustration.svg" alt="Ilustracao de estudos" class="auth-visual-image">
+                <div class="auth-visual-overlay"></div>
+                <div class="auth-visual-content">
+                    <p class="auth-kicker">Plataforma de Sociologia</p>
+                    <h1>Seu caderno digital, tarefas e calendario em um lugar</h1>
+                    <p>Organize seus estudos por aluno com autenticacao, exportacao e controle visual de eventos importantes.</p>
+                </div>
+                <div id="authVisualParticles" class="auth-visual-particles" aria-hidden="true"></div>
+            </aside>
+
+            <section class="auth-panel card auth-card" aria-label="Acesso da conta">
+                <div class="auth-switch" role="tablist" aria-label="Escolher entre login ou cadastro">
+                    <button type="button" id="switchLoginBtn" class="auth-switch-btn active" role="tab" aria-selected="true" aria-controls="loginFormPanel">Login</button>
+                    <button type="button" id="switchRegisterBtn" class="auth-switch-btn" role="tab" aria-selected="false" aria-controls="registerFormPanel">Cadastro</button>
+                </div>
+
+                <div id="loginFormPanel" class="auth-form-panel active" role="tabpanel">
+                    <h2>Entrar na plataforma</h2>
+                    <p class="auth-panel-text">Acesse suas anotacoes, atividades e eventos com seguranca.</p>
+
+                    <form id="loginForm" class="auth-panel-form">
+                        <label for="loginUsername">Usuario</label>
+                        <input id="loginUsername" type="text" placeholder="Ex: maria3ano" required autocomplete="username">
+
+                        <label for="loginPassword">Senha</label>
+                        <input id="loginPassword" type="password" placeholder="Sua senha" required autocomplete="current-password">
+
+                        <button type="submit" class="auth-submit-btn">Entrar</button>
+                    </form>
+                </div>
+
+                <div id="registerFormPanel" class="auth-form-panel" role="tabpanel" hidden>
+                    <h2>Criar nova conta</h2>
+                    <p class="auth-panel-text">Cadastre-se para salvar seu progresso individual de estudos.</p>
+
+                    <form id="registerForm" class="auth-panel-form">
+                        <label for="registerUsername">Novo usuario</label>
+                        <input id="registerUsername" type="text" placeholder="Ex: joao3ano" required autocomplete="username">
+
+                        <label for="registerPassword">Nova senha</label>
+                        <input id="registerPassword" type="password" placeholder="Minimo 4 caracteres" required autocomplete="new-password">
+
+                        <button type="submit" class="auth-submit-btn">Cadastrar</button>
+                    </form>
+                </div>
+
+                <p id="authMessage" class="status-box">Faca login para continuar.</p>
+            </section>
+        </section>
+    </main>
+
+    <script src="../scripts/js/script.js"></script>
+</body>
+</html>

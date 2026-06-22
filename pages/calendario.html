@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario | Sociologia 3º</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav class="top-nav" id="topNav">
+        <a href="index.html" class="brand">Sociologia 3º</a>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="caderno.html">Caderno</a>
+            <a href="importantes.html">Importantes</a>
+            <a href="calendario.html">Calendario</a>
+        </div>
+        <div class="session-panel">
+            <span id="currentUserBadge" class="user-badge">Visitante</span>
+            <button id="logoutBtn" class="important-btn" type="button">Sair</button>
+        </div>
+    </nav>
+
+    <header class="hero reveal">
+        <div class="hero-content">
+            <p class="tag">Visao mensal</p>
+            <h1>Calendario de Provas e Entregas</h1>
+            <p class="intro">Visualize todos os eventos importantes por mes e acompanhe os proximos compromissos.</p>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="card reveal">
+            <div class="calendar-header">
+                <button id="prevMonthBtn" class="button-link" type="button">Mes anterior</button>
+                <h2 id="calendarMonthLabel">Mes</h2>
+                <button id="nextMonthBtn" class="button-link" type="button">Proximo mes</button>
+            </div>
+            <div class="calendar-weekdays">
+                <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sab</span>
+            </div>
+            <div id="calendarGrid" class="calendar-grid"></div>
+        </section>
+
+        <section class="card reveal">
+            <h2>Eventos do Mes Selecionado</h2>
+            <ul id="calendarEventsList" class="events-list"></ul>
+        </section>
+    </main>
+
+    <footer class="reveal">
+        <p>Material de apoio - Sociologia 3º ano</p>
+    </footer>
+
+    <script src="../scripts/js/script.js"></script>
+</body>
+</html>

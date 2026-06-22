@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importantes | Sociologia 3º</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav class="top-nav" id="topNav">
+        <a href="index.html" class="brand">Sociologia 3º</a>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="caderno.html">Caderno</a>
+            <a href="importantes.html">Importantes</a>
+            <a href="calendario.html">Calendario</a>
+        </div>
+        <div class="session-panel">
+            <span id="currentUserBadge" class="user-badge">Visitante</span>
+            <button id="logoutBtn" class="important-btn" type="button">Sair</button>
+            <button id="checkImportantBtn" class="important-btn" type="button">
+                Checar importantes
+                <span id="importantCount" class="count-badge">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero reveal" id="atividades">
+        <div class="hero-content">
+            <p class="tag">Agenda de prioridade</p>
+            <h1>Coisas Importantes</h1>
+            <p class="intro">Registre provas, entregas de trabalho e eventos importantes. Marque o que ja foi concluido.</p>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="card reveal">
+            <h2>Atividades importantes</h2>
+            <p id="importantStatus" class="status-box">Sincronizando com o servidor...</p>
+
+            <div class="summary-grid">
+                <article class="summary-item">
+                    <strong id="summaryTotal">0</strong>
+                    <span>Total</span>
+                </article>
+                <article class="summary-item">
+                    <strong id="summaryPending">0</strong>
+                    <span>Pendentes</span>
+                </article>
+                <article class="summary-item contrast">
+                    <strong id="summaryUrgent">0</strong>
+                    <span>Urgentes (7 dias)</span>
+                </article>
+            </div>
+
+            <form id="taskForm" class="task-form">
+                <label for="taskTitle">Nova atividade</label>
+                <input id="taskTitle" name="taskTitle" type="text" placeholder="Ex: Entregar trabalho de cidadania" required>
+
+                <div class="task-form-grid">
+                    <div>
+                        <label for="taskDueDate">Data limite</label>
+                        <input id="taskDueDate" name="taskDueDate" type="date">
+                    </div>
+                    <div class="task-important-toggle">
+                        <input id="taskImportant" name="taskImportant" type="checkbox" checked>
+                        <label for="taskImportant">Marcar como importante</label>
+                    </div>
+                </div>
+
+                <div class="note-actions">
+                    <button type="submit">Adicionar atividade</button>
+                </div>
+            </form>
+
+            <div class="task-filters" id="taskFilters">
+                <button type="button" class="filter-btn active" data-task-filter="all">Todas</button>
+                <button type="button" class="filter-btn" data-task-filter="pending">Pendentes</button>
+                <button type="button" class="filter-btn" data-task-filter="done">Concluidas</button>
+            </div>
+
+            <div class="export-actions">
+                <button id="exportTasksCsvBtn" type="button" class="button-link">Exportar atividades CSV</button>
+                <button id="exportTasksPdfBtn" type="button" class="button-link">Exportar atividades PDF</button>
+            </div>
+
+            <ul class="task-list" id="tasksList"></ul>
+        </section>
+
+        <section class="card reveal">
+            <h2>Anotar evento importante</h2>
+            <p id="eventAlert" class="status-box">Sem eventos urgentes para os proximos 7 dias.</p>
+            <form id="eventForm" class="event-form">
+                <label for="eventTitle">Titulo</label>
+                <input id="eventTitle" name="eventTitle" type="text" placeholder="Ex: Prova de Sociologia" required>
+
+                <label for="eventDate">Data</label>
+                <input id="eventDate" name="eventDate" type="date" required>
+
+                <label for="eventType">Tipo</label>
+                <select id="eventType" name="eventType">
+                    <option value="Prova">Prova</option>
+                    <option value="Trabalho">Trabalho</option>
+                    <option value="Evento">Evento</option>
+                    <option value="Outro">Outro</option>
+                </select>
+
+                <label for="eventDetail">Detalhes</label>
+                <textarea id="eventDetail" name="eventDetail" rows="4" placeholder="Tema, capitulo, observacoes..."></textarea>
+
+                <div class="note-actions">
+                    <button type="submit">Salvar evento</button>
+                    <button type="button" id="clearEventsBtn" class="secondary">Limpar eventos</button>
+                </div>
+            </form>
+
+            <div class="export-actions">
+                <button id="exportEventsCsvBtn" type="button" class="button-link">Exportar eventos CSV</button>
+                <button id="exportEventsPdfBtn" type="button" class="button-link">Exportar eventos PDF</button>
+            </div>
+
+            <ul id="eventsList" class="events-list"></ul>
+        </section>
+    </main>
+
+    <footer class="reveal">
+        <p>Material de apoio - Sociologia 3º ano</p>
+    </footer>
+
+    <script src="../scripts/js/script.js"></script>
+</body>
+</html>

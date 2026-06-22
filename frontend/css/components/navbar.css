@@ -1,0 +1,60 @@
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.8rem 1.2rem;
+    backdrop-filter: blur(7px);
+    background: linear-gradient(120deg, rgba(40, 66, 58, 0.92), rgba(95, 63, 37, 0.92));
+    border-bottom: 1px solid rgba(246, 234, 216, 0.34);
+    transition: transform 0.35s ease;
+}
+
+.brand {
+    color: var(--surface-cream);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+.nav-links a {
+    color: var(--surface-cream);
+    text-decoration: none;
+    padding: 0.35rem 0.6rem;
+    border-radius: 8px;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: rgba(246, 234, 216, 0.2);
+    transform: translateY(-2px);
+}
+
+.session-panel {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+}
+
+.user-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(246, 234, 216, 0.35);
+    border-radius: 999px;
+    padding: 0.35rem 0.62rem;
+    font-size: 0.86rem;
+    font-weight: 700;
+}
